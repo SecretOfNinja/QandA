@@ -92,14 +92,22 @@ console.log(mathcal('/', 49, 7));
 */
 
 ////// Ex4.1 - Fibonacci   //////
-/* function fibonacci(num) {
-  if (num <= 1) {
+/*
+function fibonacci(num) {
+  if (num<= 1) {
     return num;
-  } else {
-    return fibonacci(num - 1) + fibonacci(num - 2);
   }
+  let prev = 0;
+  let current = 1;
+  for (let i = 2; i <= num; i++) {
+    const next = prev + current;
+    prev = current;
+    current = next;
+  }
+  return current;
 }
 console.log(fibonacci(10)); 
+console.log(fibonacci(20)); 
 */
 
 ////// Ex5.1 - trimming string   //////
